@@ -16,19 +16,21 @@ BASIC APP WHERE A USER CAN ADD BOOK TO READ AND UPDATE STATUS
 
 ## Implementation
 
-1. ### Implement Laravel Sanctum for Authentication
+### 1. Implement Laravel Sanctum for Authentication
+
     https://codelapan.com/post/laravel-8-rest-api-authentication-with-sanctum
-2. ### Create Migration
+
+### 2. Create Migration
 
 ---
 
-1. **Migration Command**
+**1. Migration Command**
 
 ```
 php artisan make:migration create_books_table
 ```
 
-2. **2. Modify create_books_table**
+**2. Modify create_books_table**
 
 ```
     public function up()
@@ -43,15 +45,15 @@ php artisan make:migration create_books_table
     }
 ```
 
-3. **C. Run Migration**
+**3. Run Migration**
 
 ```
 php artisan migrate
 ```
 
-4. **D. Verify the table books were created to the database**
-   If you are using xampp, go to localhost/phpmyadmin
+**4. Verify the table books were created to the database**
+If you are using xampp, go to localhost/phpmyadmin
 
 ---
 
-3. ### Create A Model
+### 3. Create A Model
