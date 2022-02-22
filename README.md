@@ -22,13 +22,13 @@
 
 ---
 
--   **_ A. Migration Command _**
+-   ** A. Migration Command **
 
 ```
 php artisan make:migration create_books_table
 ```
 
--   **_ B. Modify create_books_table _**
+-   ** B. Modify create_books_table **
 
 ```
     public function up()
@@ -49,9 +49,9 @@ php artisan make:migration create_books_table
 php artisan migrate
 ```
 
--   **_ D. Verify the table books were created to the database _**
+-   ** D. Verify the table books were created to the database **
     If you are using xampp, go to localhost/phpmyadmin
 
-3. Create A Model
-
 ---
+
+3. Create A Model
