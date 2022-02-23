@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,15 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::get('/wisdoms', [App\Http\Controllers\WisdomController::class, 'getWisdoms']);
     Route::get('/wisdom', [App\Http\Controllers\WisdomController::class, 'getWisdom']);
+
+    Route::controller(BookController::class)->group(function () {
+        Route::get('/books', 'index');
+        Route::post('/books', 'store');
+    });
+
+    // Route::group(['/books'], function () {
+    //     Route::get('/', [App\Http\Controllers\BookController::class, 'index']);
+    // });
 
     // API route for logout user
     Route::post('/logout', [App\Http\Controllers\API\AuthController::class, 'logout']);
